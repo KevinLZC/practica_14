@@ -11,8 +11,22 @@
     <h1>Person name: <%= ID %></h1>
     <h2>Mensaje: <%= message %></h2>
 
-    <% for(let i = 0; i < times; i++) { %>
-        <h3><%= message %> <%= ID %> </h3>
-    <% } %>
+    <% switch (message) {
+        case "Hola": %> 
+            <% for(let i = 0; i < times; i++) { %>
+                <p>Hola <%= ID %> </p>
+            <% }
+            break;
+        case "Adios": %>
+        <% for(let i = 0; i < times; i++) { %>
+            <p>Adios <%= ID %> </p>
+        <% }
+            break;
+        case "Bienvenido": %>
+        <% for(let i = 0; i < times; i++) { %> 
+                <p>Bienvenido <%= ID %> </p>
+        <% }
+            break;
+    }; %>
 </body>
 </html>
